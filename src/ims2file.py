@@ -52,7 +52,7 @@ def load_and_resize(file_path, imscale):
 
     return img
 
-
+#Gets a normalized set of attribute vectors
 def get_att(codes_fn, semantics_fn, mean_correction=True):
 
     semantics = [line.strip().split()[1] for line in open(semantics_fn)]
@@ -98,6 +98,7 @@ def get_att(codes_fn, semantics_fn, mean_correction=True):
 
     return sem_labels.tolist(), cw.T.tolist()
 
+#get image lmdb and dataInfo
 def main(args):
     cap_dict = {'AWA2': 9e9 ,'CUB': 3e9 , 'SUN': 5e9}
     MAX_SIZE = cap_dict[args.dataset_name]
