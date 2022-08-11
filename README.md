@@ -96,7 +96,14 @@ Model save in ```src/checker/checkpoints```:
 ### Evaluation
 Example
 
-```python sample.py --dataset_name AWA2 --img_encoder_name AlexNet  --train_class_path ../data/AWA2/standard_split/trainvalclasses.txt --test_class_path ../data/AWA2/standard_split/testclasses.txt  --data_path ../data_save/AWA2/data_info.json --img_path ../data_save/AWA2/lmdb  --batch_size 64 --num_workers 4```.
+```bash
+python sample.py --dataset_name AWA2 --img_encoder_name AlexNet \
+ --train_class_path ../data/AWA2/standard_split/trainvalclasses.txt \
+ --test_class_path ../data/AWA2/standard_split/testclasses.txt  \
+  --data_path ../data_save/AWA2/data_info.json \ 
+ --img_path ../data_save/AWA2/lmdb  --batch_size 64 --num_workers 4
+```
+
 - This script will return  Mean class accuracy for source and target classes in conventional setting and generalized setting
 
 
