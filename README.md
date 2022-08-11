@@ -112,6 +112,6 @@ python sample.py --dataset_name AWA2 --img_encoder_name AlexNet \
  --img_path ../data_save/AWA2/lmdb  --batch_size 64 --num_workers 4
 ```
 
-- This script will return  Mean class accuracy for source and target classes in conventional setting and generalized setting
+- This script will return  Mean class accuracy for target classes in conventional setting and generalized setting
 
 
