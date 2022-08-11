@@ -45,7 +45,6 @@ test_iter:
 loss : from utils, QFSLloss
 trainer : sgd
 num_epochs : C.Model.epoch
-attr_set : A collection of attributes for all classes (in order corresponding to the number of each class) 
 is_test_class : a list , Mark each class(in order corresponding to the number of each class) as a source class or not
 class_num : Number of classes
 add_weight : the weight of addtional bias loss 
