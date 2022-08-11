@@ -15,7 +15,9 @@ from args import get_parser
 import json
 
 
-
+'''
+Build data loader
+'''
 def build_loader(img_path, source_classes_list, target_classes_list, data_info, batch_size,num_wokers):
     corpus = Corpus(img_path, source_classes_list, target_classes_list, data_info, batch_size,num_wokers)
     return corpus.train_dataloader,corpus.test_dataloader
@@ -109,7 +111,9 @@ def train_model(args,model,train_iter,test_iter,loss,optimizer,is_test_class,dev
             test_mca_best = mca_cov
             save_model(net,optimizer,C.checkpoints_dir,suff='best')
 
-
+'''
+Gets the target classes and source classes
+'''
 def get_split_class(source_class_path, target_class_path):
 
     sourse_classes = open(source_class_path, 'r')
@@ -124,7 +128,9 @@ def get_split_class(source_class_path, target_class_path):
         target_classes_list.append(t_class)
     return sourse_classes_list , target_classes_list
 
-
+'''
+Gets the parameter set of the last fully connected layer (attr_set) and The tag of the target class
+'''
 def get_attr_set(source_classes_list, target_classes_list, data_info):
     attr_set = []
     is_test_class = []
