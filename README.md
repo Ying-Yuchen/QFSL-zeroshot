@@ -35,13 +35,21 @@ $ pip install -r requirements.txt
 
 ### Tour
 #### code
+
 1.```ims2file.py```: Script for preparing LMDBs used in ```train.py``` and ```sample.py```.
+
 2.```train.py```: Training script.
+
 3.```sample.py```: Evaluation script.
+
 4.```QFSLnet.py```: Defines the QFSLmodel.
+
 #### data
+
 1.Partition into source and target classes: ```classes.txt```,```trainvalclasses.txt```,```testclasses.txt``` .
+
 2.class attributes names: ```attributes.txt```
+
 3.class attributes labels: ```class_attribute_labels_continuous.txt```
 
 
